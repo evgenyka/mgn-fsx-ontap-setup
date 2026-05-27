@@ -12,12 +12,12 @@ FSX_FILE_SYSTEM_ID=$(aws fsx create-file-system \
   --file-system-type ONTAP \
   --storage-capacity "$FSX_STORAGE_CAPACITY" \
   --storage-type SSD \
-  --subnet-ids "$TARGET_SUBNET_ID" "$STANDBY_SUBNET_ID" \
+  --subnet-ids "$FSX_PREFERRED_SUBNET_ID" "$FSX_STANDBY_SUBNET_ID" \
   --security-group-ids "$FSX_SG_ID" \
   --ontap-configuration '{
     "DeploymentType": "MULTI_AZ_1",
     "ThroughputCapacity": '"$FSX_THROUGHPUT_CAPACITY"',
-    "PreferredSubnetId": "'"$TARGET_SUBNET_ID"'",
+    "PreferredSubnetId": "'"$FSX_PREFERRED_SUBNET_ID"'",
     "EndpointIpAddressRange": "'"$FSX_ENDPOINT_IP_RANGE"'",
     "FsxAdminPassword": "'"$FSX_ADMIN_PASSWORD"'",
     "AutomaticBackupRetentionDays": 0

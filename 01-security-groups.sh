@@ -53,13 +53,13 @@ aws ec2 authorize-security-group-ingress \
 aws ec2 authorize-security-group-ingress \
   --region "$REGION" \
   --group-id "$FSX_SG_ID" \
-  --protocol tcp --port 443 --cidr "$TARGET_SUBNET_CIDR"
+  --protocol tcp --port 443 --cidr "$FSX_PREFERRED_SUBNET_CIDR"
 
 # HTTPS from FSx standby subnet (for PrivateLink)
 aws ec2 authorize-security-group-ingress \
   --region "$REGION" \
   --group-id "$FSX_SG_ID" \
-  --protocol tcp --port 443 --cidr "$STANDBY_SUBNET_CIDR"
+  --protocol tcp --port 443 --cidr "$FSX_STANDBY_SUBNET_CIDR"
 
 echo ""
 echo "=== Done ==="

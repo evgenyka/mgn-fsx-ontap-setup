@@ -55,7 +55,7 @@ BASTION_ID=$(aws ec2 run-instances \
   --image-id "$AMI_ID" \
   --instance-type t3.small \
   --key-name "$KEY_NAME" \
-  --subnet-id "$TARGET_SUBNET_ID" \
+  --subnet-id "$FSX_PREFERRED_SUBNET_ID" \
   --security-group-ids "$BASTION_SG_ID" \
   --associate-public-ip-address \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=fsx-bastion}]' \

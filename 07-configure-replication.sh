@@ -13,7 +13,7 @@ echo "1. Navigate to: Application Migration Service > Settings > Replication tem
 echo "2. Choose 'Edit'"
 echo "3. Set the following:"
 echo ""
-echo "   Target subnet:          $TARGET_SUBNET_ID"
+echo "   Target subnet:          $FSX_PREFERRED_SUBNET_ID"
 echo "   Storage type:           AWS FSx for ONTAP"
 echo "   SVM ID:                 (select from list)"
 echo "   FSx Storage Secret ARN: $SECRET_ARN"
