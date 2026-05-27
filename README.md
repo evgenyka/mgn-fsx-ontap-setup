@@ -60,6 +60,7 @@ vim config.env
 | `07-configure-replication.sh` | Configure MGN replication template | Instructions |
 | `08-configure-launch-settings.sh` | Configure launch template and settings | Instructions |
 | `09-enable-volume-validation.sh` | Enable post-launch validation | Instructions |
+| `10-increase-throughput.sh` | Increase FSx throughput capacity (optional) | Automated |
 | `cleanup.sh` | Tear down resources | Automated |
 
 ## Important Notes
