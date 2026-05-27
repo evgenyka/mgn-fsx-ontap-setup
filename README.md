@@ -48,6 +48,7 @@ vim config.env
 | `config.env` | Configuration variables | Config |
 | `01-configure-security-groups.sh` | Create MGN-Instances-SG and FSx-ONTAP-SG | Automated |
 | `02-create-fsx-ontap.sh` | Create FSx for ONTAP file system | Automated |
+| `02b-create-bastion.sh` | Create bastion host for FSx management | Automated |
 | `03a-create-certificates.sh` | Generate CA and client certificates | Automated |
 | `03b-install-cert-ontap.sh` | Install cert on FSx ONTAP CLI | Instructions |
 | `04-store-certificates-secrets-manager.sh` | Store cert/key in Secrets Manager | Automated |
